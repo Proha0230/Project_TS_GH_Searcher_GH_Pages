@@ -1,3 +1,5 @@
+// Компонент одного элемента из Инфо пользователя, такие как твиттер геоположение, работа, саит
+
 import styles from './InfoItem.module.scss';
 
 export interface InfoItemProps {
@@ -7,11 +9,17 @@ export interface InfoItemProps {
 }
 
 export const InfoItem = ({icon, isLink, text }: InfoItemProps) => {
+
+  // Проверка есть ли текст в данном поле, если нет то выдаст надпись Not Availible
   const currentText = text || "Not Available";
+
   let currentHref = "";
+
+  // Проверка на то ссылка или просто текст - startsWish - начало содержимого в поле 
   if(isLink) {
     currentHref = text && text.startsWith("http") ? text : `https://${text}`;
-  }
+  };
+
   return (
     <div className={`${styles.infoItem} ${text ? "" : `${styles.empty}`}`}>
       {icon}
@@ -23,9 +31,10 @@ export const InfoItem = ({icon, isLink, text }: InfoItemProps) => {
           rel='noreferrer'
           className={styles.link}
           >
-            : Link
+            {currentText.slice(0,35)}
           </a>
-        ) : `: ${currentText}`}
+        ) : "ㅤ" + currentText } 
+        {/* вставлен прозрачный символ для отступа */}
       </div>
     </div>
   );

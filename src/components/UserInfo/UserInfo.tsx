@@ -1,3 +1,9 @@
+// Общий компонент Информации о пользователе где включены иконки и информация о твиттере
+// сайте геолокации и месте работы. методом перебора .map они все показываются.
+// index добавляем просто так как метод map Требует или id или Index. его даже может и не быть 
+// но в методе он нужен
+
+
 import {ReactComponent as CompanyIcon} from 'assets/icon-company.svg';
 import {ReactComponent as LocationIcon} from 'assets/icon-location.svg';
 import {ReactComponent as TwitterIcon} from 'assets/icon-twitter.svg';
@@ -13,7 +19,7 @@ export const UserInfo = ({blog, company,location,twitter }: UserInfoProps) => {
 const items: InfoItemProps[] = [
   {
     icon:<LocationIcon />,
-    text:location,
+    text: location,
   },
 
   {
@@ -28,7 +34,7 @@ const items: InfoItemProps[] = [
   },
   {
     icon:<CompanyIcon />,
-    text:company,
+    text: company,
   },
 ]
 

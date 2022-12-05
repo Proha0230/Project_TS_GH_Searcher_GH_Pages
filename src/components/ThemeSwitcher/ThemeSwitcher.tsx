@@ -1,3 +1,5 @@
+// Компонент земсвитчера который импортирован в хэдер
+
 import {ReactComponent as MoonIcon} from 'assets/icon-moon.svg';
 import {ReactComponent as SunIcon} from 'assets/icon-sun.svg';
 import { useEffect, useState } from 'react';

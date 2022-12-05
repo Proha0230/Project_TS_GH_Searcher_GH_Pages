@@ -1,3 +1,5 @@
+// Общий компонент нашей карточки пользователя со всей информацией
+
 import { UserInfo } from 'components/UserInfo';
 import { UserStat } from 'components/UserStat';
 import { UserTitle } from 'components/UserTitle';

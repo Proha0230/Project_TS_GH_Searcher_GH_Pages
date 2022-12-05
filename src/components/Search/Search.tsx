@@ -1,3 +1,5 @@
+// Компонент поисковой строки с кнопкой
+
 import {ReactComponent as SearchIcon} from "assets/icon-search.svg";
 import { Button } from "components/Button";
 import React from "react";
@@ -23,7 +25,7 @@ export const Search=({hasError, onSubmit}:SearchProps) => {
     event.preventDefault();
     const text = event.currentTarget.username.value;
   // const text = searchRef.current ? searchRef.current.value : '';
-    if(text){
+    if(text.trim()){
       onSubmit(text);
   // if (searchRef.current)
   // searchRef.current.value = '';
@@ -48,10 +50,8 @@ export const Search=({hasError, onSubmit}:SearchProps) => {
       {hasError && (
         <div className={styles.error}>
           No result
-        </div>
-        
+        </div>       
       )}
-
       <Button>Search</Button>
       </div>
     </form>

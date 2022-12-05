@@ -1,8 +1,11 @@
+// Компнент отображающий имя пользователя и когда был создан его аккаунт
+
 import { LocalGithubUser } from 'types';
 import styles from './UserTitle.module.scss';
 
 interface UserTitleProps extends Pick <LocalGithubUser, 'name' | 'login' | 'created'> { }
 
+// настраиваем отображение даты создания аккаунта по британским стандартам
 const localDate = new Intl.DateTimeFormat('en-GB', {
   day:'numeric',
   month:'short',
@@ -11,6 +14,7 @@ const localDate = new Intl.DateTimeFormat('en-GB', {
 
 export const UserTitle = ({name, login, created }: UserTitleProps) => {
   
+// создаем параметр даты в формате дата берущий информацию из API GitHub параметра created
   const joinedDate = localDate.format(new Date (created))
 
   return(

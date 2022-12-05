@@ -1,6 +1,10 @@
+// Задаем типизацию всех получаемых и отображаемых данных которые будем использовать везде
+
+
+// Наши измененные названия получаемых из API парметров которые мы потом преобразуем в папке utils в
+// файле extract-local-user.ts 
 export type LocalGithubUser = {
     login:string,
-    id:number,
     avatar:string,
     name:string,
     company:string,
@@ -14,6 +18,8 @@ export type LocalGithubUser = {
     created:string
 }
 
+
+// Изначальные названия параметров и их типизация который приходят из API GH
 export type GithubUser = {
     login:string,
     id:number,
@@ -30,6 +36,7 @@ export type GithubUser = {
     created_at:string
 }
 
+// типизация ошибки в строке поиска при условии отстутствия пользователя по поисковому запросу
 export type GithubError = {
     message:string,
     documentation_url:string,

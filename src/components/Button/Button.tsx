@@ -1,3 +1,6 @@
+// компонент кнопки поиска Search. Его типизация дающая TS понимание что должно происходить
+// по нажатию на нее
+
 import styles from './Button.module.scss';
 
 interface ButtonProps {

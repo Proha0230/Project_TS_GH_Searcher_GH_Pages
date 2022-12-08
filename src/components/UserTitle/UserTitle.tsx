@@ -1,5 +1,6 @@
 // Компнент отображающий имя пользователя и когда был создан его аккаунт
 
+import React from 'react';
 import { LocalGithubUser } from 'types';
 import styles from './UserTitle.module.scss';
 

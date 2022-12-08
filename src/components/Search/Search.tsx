@@ -1,6 +1,6 @@
 // Компонент поисковой строки с кнопкой
 
-import {ReactComponent as SearchIcon} from "assets/icon-search.svg";
+import SearchIcon from "assets/icon-search.svg";
 import { Button } from "components/Button";
 import React from "react";
 import styles from './Search.module.scss';

@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { GithubError, GithubUser, LocalGithubUser } from 'types';
 import { isGithubUser } from 'utils/typeguards';
 import { extractLocalUser } from 'utils/extract-local-user';
+import React from 'react';
 
 // создаем базовый URL по которому из API GH будет находиться информация о user'е
 const BASE_URL = 'https://api.github.com/users/';

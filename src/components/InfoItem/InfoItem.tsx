@@ -1,5 +1,5 @@
 // Компонент одного элемента из Инфо пользователя, такие как твиттер геоположение, работа, саит
-
+import React from 'react';
 import styles from './InfoItem.module.scss';
 
 export interface InfoItemProps {

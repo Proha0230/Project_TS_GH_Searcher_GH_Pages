@@ -1,5 +1,5 @@
 // Компонент шапки (хэдэра) с названием приложения и земсвитчера (кнопка смены темы)
-
+import React from 'react';
 import { ThemeSwitcher } from 'components/ThemeSwitcher';
 import styles from './TheHeader.module.scss';
 

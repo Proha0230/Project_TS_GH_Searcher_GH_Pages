@@ -1,5 +1,5 @@
 // Компонент отображающий кол-во репозиториев, подписчиков и подписок пользователя
-
+import React from 'react';
 import { LocalGithubUser } from 'types';
 import styles from './UserStat.module.scss';
 
